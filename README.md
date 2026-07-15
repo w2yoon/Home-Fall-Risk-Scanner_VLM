@@ -1,13 +1,9 @@
-# SEVA Home Fall-Risk Scanner (MVP)
+# SEVA Home Fall-Risk Scanner
 
-A Streamlit demo that analyzes a photo of an elderly person's room using a
-vision-language model, flags potential fall hazards grounded in the CDC
-STEADI home safety checklist, and returns an annotated photo plus a
-prioritized list of hazards with plain-language explanations and
+A web demo that analyzes a photo of an elderly person's room using a vision-language model, flags potential fall hazards grounded in the CDC STEADI home safety checklist, and returns an annotated photo plus a prioritized list of hazards with plain-language explanations and
 recommended fixes.
 
-**Disclaimer:** This tool provides general safety observations and is not
-a substitute for a professional in-home safety assessment or medical advice.
+**Disclaimer:** This tool provides general safety observations and is not a substitute for a professional in-home safety assessment or medical advice.
 
 ## Setup
 
@@ -34,9 +30,3 @@ a substitute for a professional in-home safety assessment or medical advice.
 - `steadi_checklist.py` — hardcoded CDC STEADI reference checklist
 - `image_annotator.py` — Pillow-based bounding box drawing
 
-## Not a medical device
-
-This is a demo/pilot artifact for internal review. It does not diagnose
-medical conditions and is not a certified fall-risk assessment tool. Always
-consult a qualified professional (e.g., occupational therapist, physician)
-for an in-home safety evaluation.
