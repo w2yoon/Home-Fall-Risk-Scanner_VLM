@@ -8,6 +8,15 @@ SEVERITY_COLORS = {
     "low": (234, 179, 8),       # yellow
 }
 DEFAULT_COLOR = (107, 114, 128)  # gray fallback
+MISSING_DEVICE_COLOR = (37, 99, 235)  # blue
+
+
+def is_missing_device(hazard: dict) -> bool:
+    """True if this entry represents a recommended-but-absent safety
+    device rather than a hazard actually visible in the photo, per the
+    "Missing: <device>" label convention set in vlm_client.py's prompt.
+    """
+    return hazard.get("label", "").strip().lower().startswith("missing")
 
 
 def _load_font(size: int):
@@ -15,6 +24,33 @@ def _load_font(size: int):
         return ImageFont.truetype("Arial.ttf", size)
     except OSError:
         return ImageFont.load_default()
+
+
+def _draw_dashed_rectangle(draw, bbox, color, width, dash=12, gap=8):
+    x_min, y_min, x_max, y_max = bbox
+    edges = [
+        ((x_min, y_min), (x_max, y_min)),
+        ((x_max, y_min), (x_max, y_max)),
+        ((x_max, y_max), (x_min, y_max)),
+        ((x_min, y_max), (x_min, y_min)),
+    ]
+    for (sx, sy), (ex, ey) in edges:
+        length = ((ex - sx) ** 2 + (ey - sy) ** 2) ** 0.5
+        if length == 0:
+            continue
+        dx, dy = (ex - sx) / length, (ey - sy) / length
+        pos = 0.0
+        while pos < length:
+            seg_end = min(pos + dash, length)
+            draw.line(
+                [
+                    (sx + dx * pos, sy + dy * pos),
+                    (sx + dx * seg_end, sy + dy * seg_end),
+                ],
+                fill=color,
+                width=width,
+            )
+            pos += dash + gap
 
 
 def annotate_image(image: Image.Image, hazards: list[dict]) -> Image.Image:
@@ -34,8 +70,13 @@ def annotate_image(image: Image.Image, hazards: list[dict]) -> Image.Image:
         x_max = bbox.get("x_max", 0.0) * width
         y_max = bbox.get("y_max", 0.0) * height
 
-        color = SEVERITY_COLORS.get(hazard.get("severity", "low"), DEFAULT_COLOR)
-        draw.rectangle([x_min, y_min, x_max, y_max], outline=color, width=box_width)
+        missing = is_missing_device(hazard)
+        if missing:
+            color = MISSING_DEVICE_COLOR
+            _draw_dashed_rectangle(draw, (x_min, y_min, x_max, y_max), color, box_width)
+        else:
+            color = SEVERITY_COLORS.get(hazard.get("severity", "low"), DEFAULT_COLOR)
+            draw.rectangle([x_min, y_min, x_max, y_max], outline=color, width=box_width)
 
         label = hazard.get("label", "")
         if label:

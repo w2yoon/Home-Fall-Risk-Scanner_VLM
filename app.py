@@ -6,7 +6,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from PIL import Image, UnidentifiedImageError
 
-from image_annotator import annotate_image
+from image_annotator import annotate_image, is_missing_device
 from steadi_checklist import DISCLAIMER_TEXT
 from vlm_client import VLMError, analyze_image_for_hazards
 
@@ -73,6 +73,10 @@ def main() -> None:
         if hazards:
             annotated = annotate_image(scanned_image, hazards)
             st.image(annotated, use_container_width=True)
+            st.caption(
+                "🟥🟧🟨 Solid box = hazard visible in photo &nbsp;·&nbsp; "
+                "🟦 Dashed blue box = recommended device not currently present"
+            )
         else:
             st.image(scanned_image, use_container_width=True)
 
@@ -82,12 +86,23 @@ def main() -> None:
             st.success("✅ No major hazards detected in this view.")
         else:
             sorted_hazards = sorted(
-                hazards, key=lambda h: SEVERITY_ORDER.get(h["severity"], 3)
+                hazards,
+                key=lambda h: (
+                    is_missing_device(h),
+                    SEVERITY_ORDER.get(h["severity"], 3),
+                ),
             )
             for hazard in sorted_hazards:
-                badge = SEVERITY_BADGE.get(hazard["severity"], hazard["severity"])
-                with st.expander(f"{badge} — {hazard['label']}", expanded=True):
-                    st.markdown(f"**Risk:** {hazard['description']}")
+                missing = is_missing_device(hazard)
+                type_label = "➕ Recommended addition" if missing else "⚠️ Hazard detected"
+                severity_badge = SEVERITY_BADGE.get(hazard["severity"], hazard["severity"])
+                risk_label = "Why it's recommended" if missing else "Risk"
+
+                with st.expander(
+                    f"{type_label} — {severity_badge} — {hazard['label']}",
+                    expanded=True,
+                ):
+                    st.markdown(f"**{risk_label}:** {hazard['description']}")
                     st.markdown(f"**Recommended fix:** {hazard['recommendation']}")
 
     st.divider()
