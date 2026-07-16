@@ -109,23 +109,32 @@ STEADI_CHECKLIST = [
         ],
         "missing_assistive_devices": [
         {
-            "device": "Bed rail",
-            "when_needed": "When the person has a history of falls, "
-                            "reduced mobility, or sleeps alone without "
-                            "someone nearby to help if they roll or slide "
-                            "out of bed.",
-            "why_it_matters": "Prevents falling out of bed during sleep "
-                               "and provides a stable point of leverage "
-                               "when getting in or out of bed.",
-        },
-        {
-            "device": "Bed assist handle / grab bar",
-            "when_needed": "When the person struggles to push themselves "
-                            "up from a lying or seated position on the bed.",
-            "why_it_matters": "Provides a secure point of leverage to "
-                               "reduce strain and prevent loss of balance "
-                               "while standing up.",
-        },
+        "device": "Bed assist handle (bed cane)",
+        "when_needed": "When a person has difficulty pushing themselves "
+                        "up from a lying or seated position on the bed.",
+        "why_it_matters": "Provides a secure leverage point for sitting "
+                           "up and standing, without the entrapment risk "
+                           "associated with full-length bed rails. "
+                           "Industry safety standard: ASTM F3186-17.",
+        "source": "ASTM F3186-17 (Standard Specification for Adult "
+                   "Portable Bed Rails and Related Products); not from "
+                   "CDC STEADI",
+        "note": "Recommend a handle/cane-type device over a full bed "
+                "rail unless a clinician has assessed a genuine roll-out "
+                "risk, due to documented entrapment risk with full rails "
+                "in frail or confused elderly users (FDA data).",
+    },
+    {
+        "device": "Floor-to-ceiling transfer pole",
+        "when_needed": "When more substantial support is needed for "
+                        "sit-to-stand transitions, and floor-mounted "
+                        "stability is preferred over a bed-attached "
+                        "device.",
+        "why_it_matters": "Tension-mounted, freestanding — no attachment "
+                           "to the bed itself, so no entrapment risk "
+                           "profile at all.",
+        "source": "Industry standard mobility aid; not from CDC STEADI",
+    },
         {
             "device": "Bedside commode or clear path lighting",
             "when_needed": "When the bathroom is not immediately adjacent "
