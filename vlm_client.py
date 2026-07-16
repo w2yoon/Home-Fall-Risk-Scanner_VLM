@@ -15,7 +15,7 @@ from google.genai import types
 
 from steadi_checklist import checklist_as_prompt_text
 
-GEMINI_MODEL = "gemini-2.0-flash"
+GEMINI_MODEL = "gemini-2.5-flash"
 
 RESPONSE_SCHEMA_HINT = """
 Return ONLY valid JSON (no markdown fences, no commentary) matching exactly
