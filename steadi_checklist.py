@@ -107,6 +107,34 @@ STEADI_CHECKLIST = [
                        "clothing, and other objects.",
             },
         ],
+        "missing_assistive_devices": [
+        {
+            "device": "Bed rail",
+            "when_needed": "When the person has a history of falls, "
+                            "reduced mobility, or sleeps alone without "
+                            "someone nearby to help if they roll or slide "
+                            "out of bed.",
+            "why_it_matters": "Prevents falling out of bed during sleep "
+                               "and provides a stable point of leverage "
+                               "when getting in or out of bed.",
+        },
+        {
+            "device": "Bed assist handle / grab bar",
+            "when_needed": "When the person struggles to push themselves "
+                            "up from a lying or seated position on the bed.",
+            "why_it_matters": "Provides a secure point of leverage to "
+                               "reduce strain and prevent loss of balance "
+                               "while standing up.",
+        },
+        {
+            "device": "Bedside commode or clear path lighting",
+            "when_needed": "When the bathroom is not immediately adjacent "
+                            "to the bed.",
+            "why_it_matters": "Reduces the distance and disorientation "
+                               "risk during nighttime bathroom trips, "
+                               "a common time for falls.",
+        },
+    ],
     },
     {
         "room": "Bathroom",
@@ -149,13 +177,19 @@ STEADI_CHECKLIST = [
 
 
 def checklist_as_prompt_text() -> str:
-    """Flatten the STEADI checklist into plain text for prompt injection."""
     lines = []
     for room in STEADI_CHECKLIST:
         lines.append(f"\n{room['room']}:")
         for item in room["items"]:
             lines.append(f"- Hazard: {item['hazard']}")
             lines.append(f"  Recommended fix: {item['fix']}")
+        # 새로 추가된 부분
+        if "missing_assistive_devices" in room:
+            lines.append(f"\n{room['room']} — Commonly needed assistive devices:")
+            for device in room["missing_assistive_devices"]:
+                lines.append(f"- Device: {device['device']}")
+                lines.append(f"  When needed: {device['when_needed']}")
+                lines.append(f"  Why it matters: {device['why_it_matters']}")
     return "\n".join(lines)
 
 
