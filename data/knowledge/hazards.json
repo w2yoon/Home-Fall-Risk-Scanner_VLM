@@ -1,0 +1,963 @@
+{
+  "$schema_version": "1.0",
+  "$source_note": "Every item below traces to a passage in a file under /sources. See sources/00_INDEX.md for the file-to-authority map. Do not add items here without first reading the source and recording the reference — see build instruction Part 1.4.",
+  "hazards": [
+    {
+      "id": "bedroom_loose_rug_trip",
+      "rooms": ["bedroom", "living_room", "hallway"],
+      "label": "Loose rug or throw rug on the floor",
+      "simple": {
+        "risk": "A rug that can slide or bunch up is one of the easiest ways to catch a foot and fall.",
+        "fix": "Remove the rug, or use double-sided tape or a non-slip backing so it can't slip."
+      },
+      "detail": {
+        "explanation": "Throw rugs and small area rugs are a leading tripping hazard because they can shift underfoot or bunch up, especially on a fast turn or when a foot catches the edge.",
+        "source_note": "CDC's STEADI \"Check for Safety\" checklist asks: \"Do you have throw rugs on the floor?\" and recommends: \"Remove the rugs, or use double-sided tape or a non-slip backing so the rugs won't slip.\" The National Institute on Aging's room-by-room guide independently advises \"Don't use throw rugs or small area rugs.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Floors",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": ["ambulatory", "cane", "walker"],
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "remove"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "bedroom_loose_rug_wheelcatch",
+      "rooms": ["bedroom", "living_room", "hallway"],
+      "label": "Loose rug — wheel-catch and rolling-obstacle risk",
+      "simple": {
+        "risk": "For a wheelchair, a loose rug isn't something to trip over — it's something a caster can dig into and catch on, throwing the chair off balance.",
+        "fix": "Remove the rug, or secure it fully flat with tape so there's no edge or ridge for a wheel to catch."
+      },
+      "detail": {
+        "explanation": "The same object — an unsecured rug — creates a different failure mode for a wheelchair user than for someone walking: rather than a trip, the risk is a caster catching the rug's edge, bunching, or losing traction on the raised lip where rug meets floor.",
+        "source_note": "SEVA guidance — general safety practice, not drawn from a published guideline. The underlying hazard and fix (secure or remove loose rugs) is CDC STEADI's \"Check for Safety\" checklist (Floors section). The wheelchair-specific wheel-catch mechanism, however, is not spelled out in any federal or NHS source reviewed for this project — it is SEVA's application of general wheeled-mobility reasoning to the same documented hazard, not a separate published finding."
+      },
+      "source": {
+        "authority": "SEVA internal",
+        "section": null,
+        "url": null,
+        "license": null,
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": ["wheelchair"],
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "remove"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bedroom_bed_one_side_blocked",
+      "rooms": ["bedroom"],
+      "label": "Bed reachable from only one side",
+      "simple": {
+        "risk": "If the bed can only be reached from one side, there's no way to get in, get out, or get help from the other side.",
+        "fix": "Leave clear floor space on both sides of the bed so it can be approached and gotten into or out of from either side."
+      },
+      "detail": {
+        "explanation": "For someone using a walker or wheelchair, a bed pushed against a wall on one side removes the option to approach, transfer, or get help from that side — turning a minor inconvenience into a real access problem.",
+        "source_note": "ADA Standards for Accessible Design (2010) §805.3 requires clear floor space on each side of the bed in long-term care residents' sleeping rooms, positioned for parallel approach to the bed, with a minimum clear floor space of 30\" by 48\" per side (§305.2). Private homes are not covered by the ADA, but the standard was written for people with the same mobility needs."
+      },
+      "source": {
+        "authority": "ADA Standards 2010",
+        "section": "805.3",
+        "url": "https://www.access-board.gov/ada/guides/chapter-3-clear-floor-or-ground-space-and-turning-space/",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": ["walker", "wheelchair"],
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bedroom_path_to_bathroom_dark",
+      "rooms": ["bedroom", "hallway"],
+      "label": "No nightlight on the path from bed to bathroom",
+      "simple": {
+        "risk": "A dark path to the bathroom at night is one of the most common times and places for a fall.",
+        "fix": "Put in a nightlight so the path is visible without needing to turn on a bright overhead light."
+      },
+      "detail": {
+        "explanation": "Nighttime bathroom trips combine two risk factors at once — reduced alertness and reduced light — which is why this specific path gets its own checklist item in fall-prevention guidance.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Is the path from your bed to the bathroom dark?\" and recommends: \"Put in a nightlight so you can see where you're walking. Some nightlights go on by themselves after dark.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Bedrooms",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [10, 20],
+        "image_treatment": "composite"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bedroom_light_not_reachable",
+      "rooms": ["bedroom"],
+      "label": "Light near the bed is hard to reach",
+      "simple": {
+        "risk": "If the light switch is out of reach from bed, getting up in the dark to turn it on is itself the risky part.",
+        "fix": "Place a lamp within easy reach of the bed, or use a touch light that doesn't require reaching for a switch."
+      },
+      "detail": {
+        "explanation": "Reaching or fumbling for a light in the dark, especially from a lying or half-seated position, is exactly the kind of momentary imbalance that leads to a fall.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Is the light near the bed hard to reach?\" and recommends: \"Place a lamp close to the bed where it's easy to reach.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Bedrooms",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [10, 30],
+        "image_treatment": "composite"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bedroom_clutter_floor",
+      "rooms": ["bedroom"],
+      "label": "Clothes, shoes, or objects on the bedroom floor",
+      "simple": {
+        "risk": "Anything left on the floor near the bed is something to trip on, especially getting up in the dark.",
+        "fix": "Keep the floor around the bed clear — pick up shoes, clothes, and other objects."
+      },
+      "detail": {
+        "explanation": "This is the same tripping mechanism as general floor clutter, but it matters more right at the bed because that's where people get up disoriented, in the dark, and half-asleep.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist (Floors section) asks: \"Are there papers, shoes, books, or other objects on the floor?\" and recommends: \"Pick up things that are on the floor. Always keep objects off the floor.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Floors",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "remove"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bedroom_missing_mobility_aid",
+      "rooms": ["bedroom"],
+      "label": "No bed-adjacent mobility aid visible",
+      "simple": {
+        "risk": "Getting in and out of bed, or repositioning at night, can be a fall risk without something steady to hold onto.",
+        "fix": "Talk to a doctor or occupational therapist about whether a bed rail, grab bar, or bed trapeze is right for this person — the right choice depends on their health, not just their bed."
+      },
+      "detail": {
+        "explanation": "This is deliberately not a specific product recommendation. The FDA and CPSC have received death and injury reports involving adult portable bed rails, mostly from entrapment and asphyxiation, and they specifically warn that bed rails are inappropriate for people with confusion, dementia, Parkinson's disease, MS, balance disorders, stroke, or low blood pressure. A bed rail that's right for one person can be actively dangerous for another. Lower-risk alternatives the FDA lists include roll guards, foam bumpers, lowering the bed, or a bed trapeze — but which one is appropriate should be decided with a clinician, not from a photo.",
+        "source_note": "FDA, \"Safety Concerns about Adult Portable Bed Rails\" and \"Recommendations for Consumers and Caregivers about Adult Portable Bed Rails\": \"The FDA and the U.S. Consumer Product Safety Commission (CPSC) have received death and injury reports related to adult portable bed rail products. Most of these reports were for entrapment, asphyxiation (suffocation), and falls... particularly to people with physical limitations or altered mental status, such as dementia or delirium.\" People with \"confusion, restlessness, lack of muscle control,\" Alzheimer's, Parkinson's, MS, balance disorders, stroke, or hypotension are named as higher-risk."
+      },
+      "source": {
+        "authority": "FDA",
+        "section": "Adult Portable Bed Rail Safety",
+        "url": "https://www.fda.gov/medical-devices/adult-portable-bed-rail-safety/safety-concerns-about-adult-portable-bed-rails",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": ["cane", "walker", "wheelchair"],
+        "hand_function": null,
+        "bed_type": "standard",
+        "vision": null
+      },
+      "action": {
+        "effort": "professional",
+        "est_cost_usd": [0, 200],
+        "image_treatment": "illustration"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bathroom_no_grab_bar_toilet",
+      "rooms": ["bathroom"],
+      "label": "No grab bar near the toilet",
+      "simple": {
+        "risk": "Sitting down and standing up from the toilet without anything to hold is a common moment for a fall.",
+        "fix": "Have a securely mounted grab bar installed next to the toilet."
+      },
+      "detail": {
+        "explanation": "A grab bar needs to be mounted into a wall stud or blocking, not just the drywall, to safely take someone's weight — this is a job for a professional, not a stick-on bar.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Do you need some support when you get in and out of the tub, or up from the toilet?\" and recommends: \"Have grab bars put in next to and inside the tub, and next to the toilet.\" For reference dimensions: the ADA Standards for Accessible Design (2010) §609, written for public/institutional toilet rooms, specify grab bars mounted 33\"–36\" high with a 1.5\" wall clearance described as an absolute dimension to prevent entrapment, and a 250 lb structural strength requirement — not a private-home requirement, but a useful benchmark for what \"securely mounted\" means."
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Bathrooms",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "professional",
+        "est_cost_usd": [100, 300],
+        "image_treatment": "illustration"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "bathroom_no_grab_bar_tub",
+      "rooms": ["bathroom"],
+      "label": "No grab bar in or beside the tub/shower",
+      "simple": {
+        "risk": "Stepping in or out of a tub or shower, or standing on a wet surface, is one of the highest-risk moments in the whole home.",
+        "fix": "Have grab bars installed inside the tub/shower and at the entry point."
+      },
+      "detail": {
+        "explanation": "Like the toilet grab bar, this needs to be mounted into the wall structure to hold real weight — a suction-cup bar is not a substitute.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist recommends grab bars \"next to and inside the tub.\" The U.S. CPSC's Home Safety Checklist for Older Consumers separately states: \"All bathtubs and showers are equipped with non-skid mats, abrasive strips, or surfaces that are not slippery and have at least one secure and easily graspable grab bar.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Bathrooms",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "professional",
+        "est_cost_usd": [100, 300],
+        "image_treatment": "illustration"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "bathroom_no_nonslip_mat",
+      "rooms": ["bathroom"],
+      "label": "No non-slip mat in the tub or shower",
+      "simple": {
+        "risk": "A wet tub or shower floor is slippery, and there's nothing there to give traction.",
+        "fix": "Add a non-slip rubber mat or self-stick strips to the tub or shower floor."
+      },
+      "detail": {
+        "explanation": "This is a same-day fix with no installation risk — the mat or strips just need to be placed on a clean, dry surface.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Is the tub or shower floor slippery?\" and recommends: \"Put a non-slip rubber mat or self-stick strips on the floor of the tub or shower.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Bathrooms",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [10, 25],
+        "image_treatment": "composite"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "bathroom_slippery_floor",
+      "rooms": ["bathroom"],
+      "label": "Bathroom floor is not slip-resistant",
+      "simple": {
+        "risk": "A bathroom floor that's slippery when wet is a fall risk every time it's used.",
+        "fix": "Cover the floor with slip-resistant material, and always wipe up water right away."
+      },
+      "detail": {
+        "explanation": "Whether a floor is slip-resistant usually isn't visible in a photo the way a missing mat or a loose rug is — the material and backing matter more than the appearance, so this is flagged as a general check rather than a specific visible defect.",
+        "source_note": "CPSC's Home Safety Checklist for Older Consumers: \"The bathroom floor is slip-resistant or is covered with secure slip-resistant materials.\""
+      },
+      "source": {
+        "authority": "CPSC",
+        "section": "Check Bathrooms",
+        "url": "https://www.cpsc.gov/s3fs-public/701.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [20, 60],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bathroom_poor_lighting",
+      "rooms": ["bathroom"],
+      "label": "Bathroom is poorly lit, especially at night",
+      "simple": {
+        "risk": "A dim bathroom at night hides exactly the kind of small hazard — a wet spot, a step, a rug edge — that causes a fall.",
+        "fix": "Add a nightlight or motion-sensor light for nighttime use, and make sure daytime lighting is bright and even."
+      },
+      "detail": {
+        "explanation": "Bathrooms combine wet surfaces with tight spaces, so poor lighting matters more here than in most rooms.",
+        "source_note": "The National Institute on Aging's \"Preventing Falls at Home: Room by Room\" guide recommends: \"Remember to leave a light on in the bathroom at night or use a night light that turns on automatically in the dark.\""
+      },
+      "source": {
+        "authority": "NIA",
+        "section": "Bathrooms",
+        "url": "https://www.nia.nih.gov/health/falls-and-falls-prevention/preventing-falls-home-room-room",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": ["low_vision"]
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [10, 25],
+        "image_treatment": "composite"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "bathroom_low_toilet_seat",
+      "rooms": ["bathroom"],
+      "label": "Toilet seat appears low relative to typical accessible height",
+      "simple": {
+        "risk": "A low toilet seat means more knee bend and more strain to sit down and stand up, which is harder to control safely.",
+        "fix": "Consider a raised toilet seat or a toilet safety frame with armrests."
+      },
+      "detail": {
+        "explanation": "This is a common recommendation in occupational-therapy practice, but none of the federal or NHS sources checked for this project give a specific seat-height number or explicitly flag toilet seat height as a checklist item the way they do grab bars or rugs.",
+        "source_note": "SEVA guidance — general safety practice, not drawn from a published guideline. Searched: CDC STEADI \"Check for Safety\" (no mention of seat height), NIA room-by-room guide (no mention), CPSC Publication 701 (no mention), ADA Standards §604/§609 excerpts fetched for this project (cover grab bar and dispenser dimensions, not seat height), NHS inform hazard-identification page (discusses low chairs/beds and toilet colour-contrast, not seat height specifically)."
+      },
+      "source": {
+        "authority": "SEVA internal",
+        "section": null,
+        "url": null,
+        "license": null,
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": ["cane", "walker", "wheelchair"],
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [25, 80],
+        "image_treatment": "composite"
+      },
+      "severity_default": "low"
+    },
+    {
+      "id": "bathroom_low_contrast_fixtures",
+      "rooms": ["bathroom"],
+      "label": "Toilet, tub, and floor are all similar colors",
+      "simple": {
+        "risk": "When the toilet, tub, and floor all blend together, it's harder to judge distances and edges — especially with low vision.",
+        "fix": "Add color contrast — for example, a darker toilet seat cover or bath mat against a lighter floor — so edges are easier to see."
+      },
+      "detail": {
+        "explanation": "This isn't about decor. Reduced contrast sensitivity is common with aging and with conditions like Parkinson's, stroke, or dementia, and it specifically affects the ability to judge where a surface changes or where a fixture's edge is.",
+        "source_note": "NHS inform (Scotland), \"Prevent falls by identifying hazards at home\": \"People with visual impairment (Parkinson's, stroke, dementia) are at higher risk. Use contrasting colours on a chair seat, bed cover, and toilet to help identify where to sit — e.g., a dark bed/seat cover against a light carpet.\" Licensed under the Open Government Licence v3.0."
+      },
+      "source": {
+        "authority": "NHS",
+        "section": "Colour and contrast",
+        "url": "https://www.nhsinform.scot/healthy-living/preventing-falls/home-safety/prevent-falls-by-identifying-hazards-at-home/",
+        "license": "ogl_v3",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": ["low_vision"]
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [10, 30],
+        "image_treatment": "composite"
+      },
+      "severity_default": "low"
+    },
+    {
+      "id": "kitchen_items_high_shelves",
+      "rooms": ["kitchen"],
+      "label": "Frequently used items stored on high shelves",
+      "simple": {
+        "risk": "Reaching up high, especially while holding something, is an easy way to lose balance.",
+        "fix": "Move the things used most often down to waist height."
+      },
+      "detail": {
+        "explanation": "This removes the need to stretch, stand on tiptoe, or climb at all for everyday items — the safest fix is not needing to reach in the first place.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Are the things you use often on high shelves?\" and recommends: \"Keep things you use often on the lower shelves (about waist high).\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Kitchen",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "kitchen_unstable_step_stool",
+      "rooms": ["kitchen"],
+      "label": "No sturdy step stool, or a chair used instead",
+      "simple": {
+        "risk": "Standing on a chair, box, or wobbly stool to reach something is one of the most common ways people fall in a kitchen.",
+        "fix": "Use a sturdy step stool with a handrail — never a chair — and make sure it's fully open and stable before stepping on it."
+      },
+      "detail": {
+        "explanation": "A step stool with a handrail gives something to hold on the way up and down, which a chair or box never does.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Is your step stool sturdy?\" and recommends: \"If you must use a step stool, get one with a bar to hold on to. Never use a chair as a step stool.\" The CPSC's Home Safety Checklist for Older Consumers adds: \"Choose a sturdy one with a handrail that you can grasp while standing on the top step. Before climbing on any step stool, make sure it is fully opened and stable on a flat surface. Discard step stools that are not stable or have broken parts.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Kitchen",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [20, 50],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "kitchen_slippery_spills",
+      "rooms": ["kitchen"],
+      "label": "Spills or wet spots on the kitchen floor",
+      "simple": {
+        "risk": "A wet kitchen floor is slippery, and kitchens are used often enough that this comes up a lot.",
+        "fix": "Clean up spills immediately, and don't walk away leaving a wet floor."
+      },
+      "detail": {
+        "explanation": "This one is behavioral rather than a fixed installation — the habit of cleaning spills right away matters more than any product.",
+        "source_note": "The National Institute on Aging's \"Preventing Falls at Home: Room by Room\" guide recommends, under Kitchen: \"Clean up spills immediately.\""
+      },
+      "source": {
+        "authority": "NIA",
+        "section": "Kitchen",
+        "url": "https://www.nia.nih.gov/health/falls-and-falls-prevention/preventing-falls-home-room-room",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "kitchen_poor_lighting",
+      "rooms": ["kitchen"],
+      "label": "Kitchen lighting is dim, especially near the stove or counters",
+      "simple": {
+        "risk": "Poor lighting near the stove, sink, and counters makes it harder to see spills, cords, or objects on the floor.",
+        "fix": "Add brighter, even lighting over the stove, sink, and countertop work areas."
+      },
+      "detail": {
+        "explanation": "Kitchens combine water, heat, and frequent movement, so lighting quality matters more here than in a room used mainly for sitting.",
+        "source_note": "CPSC's Home Safety Checklist for Older Consumers: \"Kitchen lighting is bright and even, especially near the stove, sink and countertop work areas.\""
+      },
+      "source": {
+        "authority": "CPSC",
+        "section": "Check Kitchens",
+        "url": "https://www.cpsc.gov/s3fs-public/701.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": ["low_vision"]
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [15, 60],
+        "image_treatment": "none"
+      },
+      "severity_default": "low"
+    },
+    {
+      "id": "livingroom_furniture_blocks_path",
+      "rooms": ["living_room"],
+      "label": "Furniture narrows or blocks the walking path",
+      "simple": {
+        "risk": "Having to walk around furniture, especially a low coffee table, is an easy way to catch a foot or lose balance.",
+        "fix": "Rearrange furniture — especially low coffee tables — so there's a clear, wide path through the room."
+      },
+      "detail": {
+        "explanation": "Low coffee tables are called out specifically because they're hard to see in peripheral vision and easy to misjudge the distance to.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"When you walk through a room, do you have to walk around furniture?\" and recommends asking someone to move it so the path is clear. The National Institute on Aging's room-by-room guide adds, under Other living areas: \"Arrange your furniture (especially low coffee tables) and other objects so they are not in your way when you walk.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Floors",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "livingroom_cords_in_path",
+      "rooms": ["living_room", "hallway"],
+      "label": "Electrical or lamp cords across the walking path",
+      "simple": {
+        "risk": "A cord across a walkway is easy to miss and easy to catch a foot on.",
+        "fix": "Coil or tape cords along the wall, out of the path people walk."
+      },
+      "detail": {
+        "explanation": "Cords are especially risky because they're low-contrast against most flooring and don't register as an obstacle the way furniture does.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks about walking \"over or around wires or cords\" and recommends coiling or taping them next to the wall. CPSC's Home Safety Checklist adds: \"All electrical, extension, and telephone cords are out of the flow of foot traffic since they pose a tripping hazard,\" and \"Electrical cords are not beneath furniture, rugs, or carpeting.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Floors",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 10],
+        "image_treatment": "remove"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "livingroom_low_unstable_seating",
+      "rooms": ["living_room"],
+      "label": "Sofa or chair is too low or unstable to get in and out of easily",
+      "simple": {
+        "risk": "A seat that's too low or too soft makes standing back up harder, which means more effort and less control.",
+        "fix": "Make sure sofas and chairs are a height that's easy to get in and out of — firmer cushions help too."
+      },
+      "detail": {
+        "explanation": "The mechanics of standing up get harder as seat height drops, because there's more distance and more knee/hip work involved — a firm, higher seat gives more leverage.",
+        "source_note": "The National Institute on Aging's room-by-room guide recommends, under Other living areas: \"Make sure your sofas and chairs are the right height for you to get in and out of easily.\""
+      },
+      "source": {
+        "authority": "NIA",
+        "section": "Other living areas",
+        "url": "https://www.nia.nih.gov/health/falls-and-falls-prevention/preventing-falls-home-room-room",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": ["cane", "walker"],
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [0, 150],
+        "image_treatment": "none"
+      },
+      "severity_default": "low"
+    },
+    {
+      "id": "livingroom_furniture_casters",
+      "rooms": ["living_room", "bedroom"],
+      "label": "Chair, table, or bed has wheels or casters",
+      "simple": {
+        "risk": "Furniture on wheels can roll or shift the moment weight is put on it — exactly when someone is trying to sit down or push themselves up.",
+        "fix": "Remove the casters, or replace the furniture with a version that sits flat and doesn't move."
+      },
+      "detail": {
+        "explanation": "Furniture with wheels lacks the stability people instinctively rely on when lowering themselves into a seat or bed, or pushing up out of one — the exact moments where a fall is most likely.",
+        "source_note": "NHS inform (Scotland), \"Prevent falls by identifying hazards at home\": \"Furniture with wheels/casters lacks stability and can move unexpectedly when you sit or lie down.\" Recommendation: \"Remove casters from the bottom of chairs, beds, and tables so they become more stable.\" Licensed under the Open Government Licence v3.0."
+      },
+      "source": {
+        "authority": "NHS",
+        "section": "Furniture and furnishings",
+        "url": "https://www.nhsinform.scot/healthy-living/preventing-falls/home-safety/prevent-falls-by-identifying-hazards-at-home/",
+        "license": "ogl_v3",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "none"
+      },
+      "severity_default": "medium"
+    },
+    {
+      "id": "livingroom_items_out_of_reach",
+      "rooms": ["living_room"],
+      "label": "Frequently used items stored out of easy reach",
+      "simple": {
+        "risk": "Over-reaching, bending low, or standing on something to grab an item takes good balance — and it's avoidable.",
+        "fix": "Keep frequently used items at waist level or within comfortable reach."
+      },
+      "detail": {
+        "explanation": "This applies beyond the kitchen — remotes, books, phone chargers, and similar everyday items stored too high or too low create the same reaching risk.",
+        "source_note": "The National Institute on Aging's room-by-room guide recommends, under Other living areas: \"Keep items you use often at waist level or within easy reach,\" and \"Don't stand on a chair or table to reach something that's too high — use a 'reach stick' instead or ask for help.\""
+      },
+      "source": {
+        "authority": "NIA",
+        "section": "Other living areas",
+        "url": "https://www.nia.nih.gov/health/falls-and-falls-prevention/preventing-falls-home-room-room",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "none"
+      },
+      "severity_default": "low"
+    },
+    {
+      "id": "livingroom_pet_hazard",
+      "rooms": ["living_room", "hallway", "kitchen"],
+      "label": "Pet underfoot in walking areas",
+      "simple": {
+        "risk": "A cat or dog underfoot, especially one that moves suddenly, can cause a fall without any warning.",
+        "fix": "Know where a pet is before standing up or walking, and consider a bell on its collar."
+      },
+      "detail": {
+        "explanation": "This is a behavioral awareness item rather than a fixed hazard — it's included because it's specifically named in federal guidance, not because it's something to visually flag in a photo.",
+        "source_note": "The National Institute on Aging's room-by-room guide recommends: \"Don't let your cat or dog trip you. Know where your pet is whenever you're standing or walking.\""
+      },
+      "source": {
+        "authority": "NIA",
+        "section": "Other living areas",
+        "url": "https://www.nia.nih.gov/health/falls-and-falls-prevention/preventing-falls-home-room-room",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 10],
+        "image_treatment": "none"
+      },
+      "severity_default": "low"
+    },
+    {
+      "id": "hallway_stairs_no_handrail",
+      "rooms": ["hallway"],
+      "label": "Missing handrail on one or both sides of stairs",
+      "simple": {
+        "risk": "Stairs without something sturdy to hold are one of the highest-risk spots in any home.",
+        "fix": "Install a sturdy, graspable handrail running the full length of the stairs — ideally on both sides."
+      },
+      "detail": {
+        "explanation": "A handrail needs to run continuously along the whole flight, not stop partway, and needs to be mounted firmly enough to catch real weight if someone starts to fall.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Are the handrails loose or broken? Is there a handrail on only one side of the stairs?\" and recommends: \"Fix loose handrails, or put in new ones. Make sure handrails are on both sides of the stairs, and are as long as the stairs.\" CPSC's Home Safety Checklist adds: \"All stairs have solidly mounted handrails that run continuously along the full length of the stairs on both sides. Handrails are easily graspable.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Stairs & Steps",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "professional",
+        "est_cost_usd": [150, 400],
+        "image_treatment": "illustration"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "hallway_stairs_poor_lighting",
+      "rooms": ["hallway"],
+      "label": "No light or light switch at top and bottom of stairs",
+      "simple": {
+        "risk": "Stairs are dangerous enough in good light — in the dark or in shadow, a single misjudged step can cause a fall.",
+        "fix": "Have an electrician install an overhead light with switches at both the top and bottom of the stairs."
+      },
+      "detail": {
+        "explanation": "Having a switch at both ends matters as much as the light itself — nobody should have to walk any part of a dark staircase just to reach a switch.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Is there a light and light switch at the top and bottom of the stairs?\" and recommends: \"Have an electrician put in an overhead light and light switch at the top and bottom of the stairs.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Stairs & Steps",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": ["low_vision"]
+      },
+      "action": {
+        "effort": "professional",
+        "est_cost_usd": [100, 300],
+        "image_treatment": "illustration"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "hallway_stairs_loose_carpet",
+      "rooms": ["hallway"],
+      "label": "Loose or torn carpet on the stairs",
+      "simple": {
+        "risk": "Carpet that's come loose or torn on a step can catch a foot or shift underfoot exactly when balance matters most.",
+        "fix": "Make sure carpet is firmly attached to every step, or remove it and attach non-slip rubber treads instead."
+      },
+      "detail": {
+        "explanation": "Loose stair carpet is worse than loose floor carpet because there's no flat recovery space — a slip on a step has further to fall.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Is the carpet on the steps loose or torn?\" and recommends: \"Make sure the carpet is firmly attached to every step, or remove the carpet and attach non-slip rubber treads to the stairs.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Stairs & Steps",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "purchase",
+        "est_cost_usd": [30, 100],
+        "image_treatment": "none"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "hallway_clutter",
+      "rooms": ["hallway"],
+      "label": "Objects on the stairs or in the hallway",
+      "simple": {
+        "risk": "Anything left on the stairs or in a hallway is something to trip on in a space that's often narrow and poorly lit.",
+        "fix": "Always keep the stairs and hallway clear of shoes, papers, books, and other objects."
+      },
+      "detail": {
+        "explanation": "Hallways and stairs are transitional spaces people move through quickly and without as much attention as a room they're sitting in — which is exactly why clutter there is riskier than the same clutter in a living room.",
+        "source_note": "CDC STEADI's \"Check for Safety\" checklist asks: \"Are there papers, shoes, books, or other objects on the stairs?\" and recommends: \"Always keep objects off the stairs.\" CPSC's Home Safety Checklist adds that walking surfaces should be \"free of electrical cords, boxes, furniture, appliances, and other objects that could pose a tripping hazard.\""
+      },
+      "source": {
+        "authority": "CDC STEADI",
+        "section": "Stairs & Steps",
+        "url": "https://www.cdc.gov/steadi/pdf/patient/customizable/CheckforSafety-Brochure-Final-Customizable-508.pdf",
+        "license": "public_domain",
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [0, 0],
+        "image_treatment": "remove"
+      },
+      "severity_default": "high"
+    },
+    {
+      "id": "general_furniture_sharp_corners",
+      "rooms": ["living_room", "bedroom"],
+      "label": "Furniture with sharp or angular corners near a walking path",
+      "simple": {
+        "risk": "If a fall does happen, a sharp table or counter corner nearby turns a fall into a much worse injury.",
+        "fix": "Add corner guards, or choose rounded-corner furniture for pieces near where someone walks or could fall."
+      },
+      "detail": {
+        "explanation": "This isn't about preventing the fall itself — it's about reducing how badly a fall that does happen can hurt someone, by softening what's nearby.",
+        "source_note": "SEVA guidance — general safety practice, not drawn from a published guideline. This is commonly mentioned in senior-safety advice from non-government sources, but was not found in the CDC STEADI checklist, the NIA room-by-room guide, or CPSC's own Publication 701 (all fetched directly for this project) despite searching CPSC specifically for furniture-corner guidance."
+      },
+      "source": {
+        "authority": "SEVA internal",
+        "section": null,
+        "url": null,
+        "license": null,
+        "verified_against_source": true,
+        "verified_date": "2026-07-17"
+      },
+      "applies_when": {
+        "mobility": null,
+        "hand_function": null,
+        "bed_type": null,
+        "vision": null
+      },
+      "action": {
+        "effort": "immediate",
+        "est_cost_usd": [5, 15],
+        "image_treatment": "composite"
+      },
+      "severity_default": "low"
+    }
+  ]
+}

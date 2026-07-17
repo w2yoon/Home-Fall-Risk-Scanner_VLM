@@ -29,4 +29,11 @@ recommended fixes.
 - `vlm_client.py` — VLM API call and defensive JSON parsing (swappable backend)
 - `steadi_checklist.py` — hardcoded CDC STEADI reference checklist
 - `image_annotator.py` — Pillow-based bounding box drawing
+- `data/knowledge/hazards.json` — source-verified home safety knowledge base (see `sources/` for the fetched documents each item traces to, and `data/knowledge/verify_kb.py` to check it)
+
+## Sources
+
+This knowledge base draws on CDC STEADI, NIA, CPSC, FDA, and the ADA Standards for Accessible Design (2010) — all U.S. federal public-domain works — plus NHS inform (Scotland) content used under the Open Government Licence v3.0.
+
+Contains public sector information licensed under the Open Government Licence v3.0.
 
